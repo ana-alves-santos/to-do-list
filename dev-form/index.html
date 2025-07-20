@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de DEVs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+  </div>
+
+  <div class="form-container">
+    <h2>Cadastro de DEVs</h2>
+
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Nome" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder="Sobrenome" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" placeholder="Email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Qual lado da aplicação você desenvolve?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="lado" checked> Front-end</label>
+          <label><input type="radio" name="lado"> Back-end</label>
+          <label><input type="radio" name="lado"> Fullstack</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="senioridade">Senioridade</label>
+            <select id="senioridade" required>
+              <option selected disabled value="">Selecione</option>
+              <option>Júnior</option>
+              <option>Pleno</option>
+              <option>Sênior</option>
+            </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tecnologias</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> HTML</label>
+          <label><input type="checkbox"> CSS</label>
+          <label><input type="checkbox"> JavaScript</label>
+          <label><input type="checkbox"> Python</label>
+          <label><input type="checkbox"> PHP</label>
+          <label><input type="checkbox"> Java</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <textarea placeholder="Conte sobre sua experiência"></textarea>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+     <script src="./script.js"></script>
+
+</body>
+</html>
