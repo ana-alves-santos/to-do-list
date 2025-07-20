@@ -4,7 +4,7 @@
 A project to manage a task list with features to add, edit, remove, and clear tasks.
 
 <p align="">
-  <a href="https://ana-alves-santos.github.io/js-learning-projects/dev-form/index.html"target="_blank">
+  <a href="https://ana-alves-santos.github.io/js-learning-projects/to-do-list/index.html"target="_blank">
    testing
   </a>
 </p>
