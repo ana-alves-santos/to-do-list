@@ -2,13 +2,6 @@
 
 A responsive developer registration form created as a study project
 
-<p align="">
-  <a href="https://ana-alves-santos.github.io/js-learning-projects/"target="_blank">
-   testing
-  </a>
-</p>
-
- 
 ## ✨ Features
 
 - ✅ Full name and email fields  
