@@ -2,6 +2,9 @@
 
 A responsive developer registration form created as a study project
 
+<img width="1062" height="498" alt="image" src="https://github.com/user-attachments/assets/6c58d4d9-daa6-4f16-bec6-8afde5c407af" />
+
+
 ## ✨ Features
 
 - ✅ Full name and email fields  
@@ -17,8 +20,3 @@ A responsive developer registration form created as a study project
 - CSS3
 - JavaScript
 
-## 🖼️ Layout Preview
-
-<p align="center">
-  <img alt="Layout View" src="assets/preview.png." width="80%">
-</p>
