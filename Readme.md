@@ -28,3 +28,5 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 - HTML5
 - CSS3
 - JavaScript 
+
+
