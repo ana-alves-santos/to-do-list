@@ -25,6 +25,6 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 
 ## 🛠️ Technologies Used
 
-- HTML
-- CSS 
+- HTML5
+- CSS3
 - JavaScript 
