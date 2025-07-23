@@ -10,7 +10,7 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 </p>
 
 
-<img width="1340" height="589" alt="image" src="https://github.com/user-attachments/assets/3e6587c6-71fb-4d7a-94a0-738c383d9ecb" />
+<img width="1352" height="577" alt="image" src="https://github.com/user-attachments/assets/51545d28-509e-4e26-817c-d08f58586655" />
 
 
 
