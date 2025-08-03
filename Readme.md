@@ -5,7 +5,7 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 
 <p align="">
   <a href="https://ana-alves-santos.github.io/to-do-list/to-do-list/index.html"target="_blank">
-   testing
+   click here to test
   </a>
 </p>
 
