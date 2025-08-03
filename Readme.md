@@ -10,8 +10,7 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 </p>
 
 
-<img width="1352" height="577" alt="image" src="https://github.com/user-attachments/assets/51545d28-509e-4e26-817c-d08f58586655" />
-
+<img width="1355" height="577" alt="image" src="https://github.com/user-attachments/assets/5d52a22b-baa1-4019-bff1-85505f36bede" />
 
 
 
@@ -21,7 +20,7 @@ A project to manage a task list with features to add, edit, remove, and clear ta
 - Edit existing tasks
 - Remove individual tasks
 - Clear the entire task list
-- Display success or error messages
+- Save in localStorage 
 
 ## 🛠️ Technologies Used
 
