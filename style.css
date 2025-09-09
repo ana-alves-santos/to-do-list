@@ -8,12 +8,6 @@ body {
   background: radial-gradient(circle, #4e342e, #2c1b19);
 }
 
-@keyframes gradientAnim {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 .container {
   text-align: center;
   background-color: rgba(203, 187, 167, 0.9);
@@ -79,22 +73,38 @@ ul li {
   margin: 5px 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 button.btn-remove {
   background-color: #A34743;
+  color: #F4F0EA;
   font-size: 0.6em;
   padding: 5px 8px;
+  margin-left: 5px;
+}
+
+button.btn-remove:hover {
+  background-color: #60041A;
 }
 
 button.btn-edit {
   background-color: #331F19;
+  color: #F4F0EA;
   font-size: 0.6em;
   padding: 5px 8px;
+  margin-left: 5px;
+}
+
+button.btn-edit:hover {
+  background-color: #000000;
 }
 
 button.btn-clear {
   background-color: #A34743;
+  color: #F4F0EA;
 }
 
 button.btn-clear:hover {
