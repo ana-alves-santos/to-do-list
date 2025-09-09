@@ -8,7 +8,6 @@ body {
   background: radial-gradient(circle, #4e342e, #2c1b19);
 }
 
-
 @keyframes gradientAnim {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -82,22 +81,22 @@ ul li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button.remover {
+button.btn-remove {
   background-color: #A34743;
   font-size: 0.6em;
   padding: 5px 8px;
 }
 
-button.editar {
+button.btn-edit {
   background-color: #331F19;
   font-size: 0.6em;
   padding: 5px 8px;
 }
 
-.botao_lista {
+button.btn-clear {
   background-color: #A34743;
 }
 
-.botao_lista:hover {
+button.btn-clear:hover {
   background-color: #60041A;
 }
