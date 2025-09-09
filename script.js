@@ -1,81 +1,79 @@
-let tarefas = [];
+let tasks = [];
 
 // Carregar tarefas do localStorage ao iniciar
 window.onload = () => {
-  const tarefasSalvas = localStorage.getItem("tarefas");
-  if (tarefasSalvas) {
-    tarefas = JSON.parse(tarefasSalvas);
-    renderizarTarefas();
+  const savedTasks = localStorage.getItem("tasks");
+  if (savedTasks) {
+    tasks = JSON.parse(savedTasks);
+    renderTasks();
   }
 };
 
-function salvarLocalStorage() {
-  localStorage.setItem("tarefas", JSON.stringify(tarefas));
+function saveLocalStorage() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-function adicionarTarefa() {
-  const inputTarefa = document.getElementById("inputTarefa");
-  let tarefa = inputTarefa.value.trim();
+function addTask() {
+  const taskInput = document.getElementById("taskInput");
+  let task = taskInput.value.trim();
 
-  const mensagem = document.getElementById("mensagem");
+  const message = document.getElementById("message");
 
-  if (tarefa == "") {
-    let mensagemErro = "Digite uma tarefa para adicioná-la a sua lista!";
-    mensagem.textContent = mensagemErro;
+  if (task === "") {
+    message.textContent = "Digite uma tarefa para adicioná-la à lista!";
   } else {
-    let mensagemSucesso = "Tarefa adicionada com sucesso!";
-    mensagem.textContent = mensagemSucesso;
-    tarefas.push(tarefa);
-    salvarLocalStorage(); // salvar após adicionar
-    renderizarTarefas();
+    message.textContent = "Tarefa adicionada com sucesso!";
+    tasks.push(task);
+    saveLocalStorage();
+    renderTasks();
   }
 
-  inputTarefa.value = "";
+  taskInput.value = "";
 }
 
-function renderizarTarefas() {
-  const listaTarefas = document.getElementById("listaTarefas");
-  listaTarefas.innerHTML = "";
+function renderTasks() {
+  const taskList = document.getElementById("taskList");
+  taskList.innerHTML = "";
 
-  for (let i = 0; i < tarefas.length; i++) {
-    let novaTarefa = document.createElement("li");
-    novaTarefa.textContent = tarefas[i];
+  tasks.forEach((task, i) => {
+    let li = document.createElement("li");
+    li.textContent = task;
 
-    let botaoRemover = document.createElement("button");
-    botaoRemover.className = "remover";
-    botaoRemover.textContent = "Remover";
-    botaoRemover.onclick = () => removerTarefa(i);
+    let btnRemove = document.createElement("button");
+    btnRemove.className = "remove";
+    btnRemove.textContent = "Remover";
+    btnRemove.onclick = () => removeTask(i);
 
-    let botaoEditar = document.createElement("button");
-    botaoEditar.className = "editar";
-    botaoEditar.textContent = "Editar";
-    botaoEditar.onclick = () => editarTarefa(i);
+    let btnEdit = document.createElement("button");
+    btnEdit.className = "edit";
+    btnEdit.textContent = "Editar";
+    btnEdit.onclick = () => editTask(i);
 
-    novaTarefa.appendChild(botaoRemover);
-    novaTarefa.appendChild(botaoEditar);
-    listaTarefas.appendChild(novaTarefa);
+    li.appendChild(btnRemove);
+    li.appendChild(btnEdit);
+    taskList.appendChild(li);
+  });
+}
+
+function removeTask(i) {
+  tasks.splice(i, 1);
+  saveLocalStorage();
+  renderTasks();
+}
+
+function editTask(i) {
+  let editedTask = prompt("Edite a tarefa:", tasks[i]);
+  if (editedTask && editedTask.trim() !== "") {
+    tasks[i] = editedTask.trim();
+    saveLocalStorage();
+    renderTasks();
   }
 }
 
-function removerTarefa(i) {
-  tarefas.splice(i, 1);
-  salvarLocalStorage(); // salvar após remover
-  renderizarTarefas();
-}
-
-function editarTarefa(i) {
-  let tarefaEditada = prompt("Edite a tarefa:", tarefas[i]);
-  if (tarefaEditada && tarefaEditada.trim() !== "") {
-    tarefas[i] = tarefaEditada.trim();
-    salvarLocalStorage(); // salvar após editar
-    renderizarTarefas();
-  }
-}
-
-function limparLista() {
-  tarefas.length = 0;
-  salvarLocalStorage(); // salvar após limpar
-  renderizarTarefas();
-  const mensagem = document.getElementById("mensagem");
-  mensagem.textContent = "Lista de tarefas limpa com sucesso!";
+function clearAllTasks() {
+  tasks.length = 0;
+  saveLocalStorage();
+  renderTasks();
+  const message = document.getElementById("message");
+  message.textContent = "Lista de tarefas limpa com sucesso!";
 }
