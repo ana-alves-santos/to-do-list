@@ -73,40 +73,24 @@ ul li {
   margin: 5px 0;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-button.btn-remove {
+button.remove {
   background-color: #A34743;
-  color: #F4F0EA;
   font-size: 0.6em;
   padding: 5px 8px;
-  margin-left: 5px;
 }
 
-button.btn-remove:hover {
-  background-color: #60041A;
-}
-
-button.btn-edit {
+button.edit {
   background-color: #331F19;
-  color: #F4F0EA;
   font-size: 0.6em;
   padding: 5px 8px;
-  margin-left: 5px;
 }
 
-button.btn-edit:hover {
-  background-color: #000000;
-}
-
-button.btn-clear {
+.list-button {
   background-color: #A34743;
-  color: #F4F0EA;
 }
 
-button.btn-clear:hover {
+.list-button:hover {
   background-color: #60041A;
 }

@@ -16,11 +16,10 @@ function saveLocalStorage() {
 function addTask() {
   const taskInput = document.getElementById("taskInput");
   let task = taskInput.value.trim();
-
   const message = document.getElementById("message");
 
   if (task === "") {
-    message.textContent = "Digite uma tarefa para adicioná-la à lista!";
+    message.textContent = "Digite uma tarefa para adicioná-la a sua lista!";
   } else {
     message.textContent = "Tarefa adicionada com sucesso!";
     tasks.push(task);
@@ -35,24 +34,24 @@ function renderTasks() {
   const taskList = document.getElementById("taskList");
   taskList.innerHTML = "";
 
-  tasks.forEach((task, i) => {
-    let li = document.createElement("li");
-    li.textContent = task;
+  for (let i = 0; i < tasks.length; i++) {
+    let newTask = document.createElement("li");
+    newTask.textContent = tasks[i];
 
-    let btnRemove = document.createElement("button");
-    btnRemove.className = "remove";
-    btnRemove.textContent = "Remover";
-    btnRemove.onclick = () => removeTask(i);
+    let removeButton = document.createElement("button");
+    removeButton.className = "remove";
+    removeButton.textContent = "Remover";
+    removeButton.onclick = () => removeTask(i);
 
-    let btnEdit = document.createElement("button");
-    btnEdit.className = "edit";
-    btnEdit.textContent = "Editar";
-    btnEdit.onclick = () => editTask(i);
+    let editButton = document.createElement("button");
+    editButton.className = "edit";
+    editButton.textContent = "Editar";
+    editButton.onclick = () => editTask(i);
 
-    li.appendChild(btnRemove);
-    li.appendChild(btnEdit);
-    taskList.appendChild(li);
-  });
+    newTask.appendChild(removeButton);
+    newTask.appendChild(editButton);
+    taskList.appendChild(newTask);
+  }
 }
 
 function removeTask(i) {
@@ -70,10 +69,9 @@ function editTask(i) {
   }
 }
 
-function clearAllTasks() {
+function clearTasks() {
   tasks.length = 0;
   saveLocalStorage();
   renderTasks();
-  const message = document.getElementById("message");
-  message.textContent = "Lista de tarefas limpa com sucesso!";
+  document.getElementById("message").textContent = "Lista de tarefas limpa com sucesso!";
 }
